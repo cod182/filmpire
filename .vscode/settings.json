@@ -1,5 +1,9 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
-	"prettier.resolveGlobalModules": false
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "prettier.resolveGlobalModules": false,
+  "javascript.format.enable": true,
+  "javascript.preferences.quoteStyle": "single",
+  "prettier.jsxSingleQuote": false,
+  "prettier.singleQuote": true
 }
