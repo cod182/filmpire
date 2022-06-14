@@ -7,12 +7,11 @@ export default makeStyles((theme) => ({
     height: '80px',
     display: 'flex',
     justifyContent: 'space-between',
-    marginLeft: '250px',
-
+    marginLeft: '240px',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: 0,
+      marginLeft: '0',
       flexWrap: 'wrap',
-    }
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -24,7 +23,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
       flexShrink: 0,
-    }
+    },
   },
   drawerPaper: {
     width: drawerWidth,
@@ -33,6 +32,6 @@ export default makeStyles((theme) => ({
     '&:hover': {
       color: 'white !important',
       textDecoration: 'none',
-    }
+    },
   },
 }));

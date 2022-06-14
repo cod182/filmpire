@@ -66,8 +66,13 @@ const MovieInformation = () => {
     );
   }
   return (
-    <Grid container className={classes.containerSpaceRound}>
-      <Grid item sm={12} lg={4}>
+    <Grid container className={classes.containerSpaceAround}>
+      <Grid
+        item
+        sm={12}
+        lg={4}
+        style={{ display: 'flex', marginBottom: '30px' }}
+      >
         <img
           className={classes.poster}
           src={`https://image.tmdb.org/t/p/w500/${data?.poster_path}`}
@@ -81,7 +86,7 @@ const MovieInformation = () => {
         <Typography variant="h5" align="center" gutterBottom>
           {data?.tagline}
         </Typography>
-        <Grid item className={classes.containerSpaceRound}>
+        <Grid item className={classes.containerSpaceAround}>
           <Box display="flex" align="center">
             <Rating readOnly value={data.vote_average / 2} />
             <Typography
@@ -93,10 +98,7 @@ const MovieInformation = () => {
             </Typography>
           </Box>
           <Typography variant="h6" align="center" gutterBottom>
-            {data?.runtime} minutes{' '}
-            {data?.spoken_languages.length > 0
-              ? ` / ${data?.spoken_languages[0].name}`
-              : ''}
+            {data?.runtime} mins | Language: {data?.spoken_languages[0].name}
           </Typography>
         </Grid>
         <Grid item className={classes.genresContainer}>
@@ -189,7 +191,7 @@ const MovieInformation = () => {
               </ButtonGroup>
             </Grid>
             <Grid item xs={12} sm={6} className={classes.ButtonsContainer}>
-              <ButtonGroup size="sm" variant="outlined">
+              <ButtonGroup size="md" variant="outlined">
                 <Button
                   onClick={addToFavorites}
                   endIcon={
